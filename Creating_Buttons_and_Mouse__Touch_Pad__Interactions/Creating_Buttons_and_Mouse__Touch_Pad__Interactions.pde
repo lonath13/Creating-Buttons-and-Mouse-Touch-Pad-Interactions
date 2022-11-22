@@ -11,7 +11,12 @@ void draw()
 //
 void keyPressed() 
 {
+  //post-OS Level start button
   if ( key==' ' && start==true) noNowReallyStart = true;
+  //
+  //prototype Key Board Quit button or shortcut
+  if ( key=='Q' || key=='q') exit();
+  if ( key==CODED && keyCode == ESC) exit();
 } //end keypressed
 //
 void mousePressed () 
