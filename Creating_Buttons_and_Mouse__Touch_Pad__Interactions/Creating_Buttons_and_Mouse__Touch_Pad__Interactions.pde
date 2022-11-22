@@ -7,6 +7,7 @@ void setup() {
 void draw() 
 {
   if ( noNowReallyStart==true ) background(0);//night Mode not considered yet
+  rect(); //quit button with hoverover
 } // end draw
 //
 void keyPressed() 
