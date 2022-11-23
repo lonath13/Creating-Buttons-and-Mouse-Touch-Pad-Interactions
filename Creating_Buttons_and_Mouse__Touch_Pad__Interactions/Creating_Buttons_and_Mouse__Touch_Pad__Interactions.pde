@@ -1,25 +1,38 @@
 //Global Variables
+int appWidth, appHeight;
 Boolean start = false, noNowReallyStart=false;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 void setup() 
 {
   //display & orientation algorithms not considered yet
-  size();
+  size(400, 300); //landscape
   //fullScreen(); // displayWidth, displayheight
   appWidth = width;
   appHeight = height;
   //population
-  quitButtonX = ;
-  quitButtonY = ;
-  quitButtonWidth = ;
-  quitButtonHeight = ;
+  float centerX = appWidth * 1/2;
+  float centerY = appHeight * 1/2;
+  quitButtonX = centerX - ( appWidth * 1/4);
+  quitButtonY = centerY - ( appHeight * 1/4);
+  quitButtonWidth = appWidth * 1/2; // could be centerX, but that is a point
+  quitButtonHeight = appHeight * 1/2; // same comment as centerX
 } // end setup
 //
 void draw() 
 {
-  if ( noNowReallyStart==true ) background(0);//night Mode not considered yet
-  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); //quit button with hoverover
+  if ( noNowReallyStart==true ) 
+    background(0);//night Mode not considered yet
+    // hoverover feature
+    println("Xvalue", quitButtonX, ,quitButtonX+quitButtonWidth);
+    println("y);
+  if () {
+    quitButtonColor = yellow;
+  } else {
+    quitButtonColor = purple;
+  } //end quitButtonColor
+  fill(quitButtonColor);
+    rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); //quit button with hoverover
 } // end draw
 //
 void keyPressed() 
