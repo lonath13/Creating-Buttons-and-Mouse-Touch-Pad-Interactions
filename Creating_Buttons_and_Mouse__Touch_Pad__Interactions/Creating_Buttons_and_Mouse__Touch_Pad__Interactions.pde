@@ -1,13 +1,25 @@
 //Global Variables
 Boolean start = false, noNowReallyStart=false;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
-void setup() {
+void setup() 
+{
+  //display & orientation algorithms not considered yet
+  size();
+  //fullScreen(); // displayWidth, displayheight
+  appWidth = width;
+  appHeight = height;
+  //population
+  quitButtonX = ;
+  quitButtonY = ;
+  quitButtonWidth = ;
+  quitButtonHeight = ;
 } // end setup
 //
 void draw() 
 {
   if ( noNowReallyStart==true ) background(0);//night Mode not considered yet
-  rect(); //quit button with hoverover
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); //quit button with hoverover
 } // end draw
 //
 void keyPressed() 
