@@ -9,6 +9,7 @@ void setup()
   //Display & Orientation Algorithms not consider yet
   size(400, 300); //Landscape
   //fullScreen(); //displayWidth, displayHeight
+  displayOrientation();
   appWidth = width;
   appHeight = height;
   //
@@ -32,12 +33,14 @@ void draw ()
     //
     //quit button hoverover faature
     if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) {
-      quitButtonColour = yellow;
+      quitButtonColor = yellow;
+      //logical rect TRUE only when hoverover is active
     } else {
-      quitButtonColour = purple;
+      quitButtonColor = purple;
+      //logical rect FALSE all other times
     } //End Quit Button Colour
     //
-    fill(quitButtonColour); 
+    fill(quitButtonColor); 
     rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button with Hoverover
   }
 } //End draw
